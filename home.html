@@ -568,11 +568,162 @@ footer{
 ::-webkit-scrollbar{width:5px}
 ::-webkit-scrollbar-track{background:var(--bg)}
 ::-webkit-scrollbar-thumb{background:var(--slate);border-radius:3px}
+
+/* ═════════════════════════════════════════════════════════════
+   ─── RESPONSIVE MOBILE & TABLET ─────────────────────────────
+   ════════════════════════════════════════════════════════════ */
+
+/* TABLET: 768px and below */
+@media(max-width:768px){
+  .navbar{padding:0 4%;height:65px}
+  .nav-links{gap:20px}
+  .nav-links a{font-size:12px}
+  
+  .hero{padding:100px 4% 60px}
+  .hero-inner{grid-template-columns:1fr;gap:40px}
+  .hero-h1{font-size:clamp(2rem,4vw,3.5rem)}
+  .hero-sub{font-size:.95rem}
+  .ring-wrap{width:320px;height:320px}
+  .ring-core img{width:85px}
+  
+  /* Services: 2 columns on tablet */
+  .svc-grid{grid-template-columns:repeat(2,1fr);gap:18px;margin-top:40px}
+  .svc-card{padding:26px 22px}
+  .svc-card h3{font-size:1.1rem}
+  
+  /* About: stack on tablet */
+  .about-grid{grid-template-columns:1fr;gap:50px}
+  .about-img{aspect-ratio:16/9}
+  .about-badge{padding:18px;bottom:-16px;right:-16px}
+  .about-badge .n{font-size:2rem}
+  
+  /* Testimonials: 2 columns */
+  .testi-grid{grid-template-columns:repeat(2,1fr);gap:16px;margin-top:40px}
+  .testi-card{padding:24px}
+  .tq{font-size:.88rem}
+  
+  /* Stats banner: 2 columns */
+  .stats-banner-inner{grid-template-columns:repeat(2,1fr);gap:20px}
+  .sb-item{padding:20px 15px}
+  .sb-item .n{font-size:2.4rem}
+  
+  .cta-section{padding:80px 4%}
+  .cta-inner .sh{font-size:clamp(1.6rem,3vw,2.2rem)}
+  
+  footer .fi{grid-template-columns:1fr;gap:30px}
+  .fbot{flex-direction:column;gap:10px;text-align:center}
+}
+
+/* MOBILE: 600px and below */
+@media(max-width:600px){
+  .navbar{padding:0 3%;height:60px}
+  .nav-links{display:none}
+  .nav-logo img{height:28px}
+  .toggle-wrap{gap:6px}
+  .toggle-label-txt{font-size:9px}
+  .theme-btn{width:40px;height:22px}
+  .t-knob{width:15px;height:15px}
+  #themetoggle:checked ~ .page .t-knob{transform:translateX(18px)}
+  
+  .hero{padding:80px 4% 50px;min-height:auto}
+  .hero-inner{grid-template-columns:1fr;gap:30px}
+  .hero-h1{font-size:clamp(1.8rem,3.5vw,2.8rem);line-height:1.1;margin-bottom:16px}
+  .hero-sub{font-size:.9rem;line-height:1.6;margin-bottom:24px}
+  .hero-btns{flex-direction:column;gap:10px}
+  .btn-pri,.btn-out{padding:12px 24px;font-size:12px;width:100%}
+  
+  .ring-wrap{width:260px;height:260px;margin:0 auto}
+  .ring-core img{width:65px}
+  .stats-row{bottom:-24px;gap:2px}
+  .stat-chip{min-width:75px;padding:10px 12px}
+  .stat-chip .n{font-size:1.1rem}
+  .stat-chip .l{font-size:.55rem}
+  
+  .ticker-item{font-size:10px;padding:0 20px}
+  
+  section{padding:60px 4%}
+  .eyebrow{font-size:10px;margin-bottom:10px}
+  .sh{font-size:clamp(1.5rem,3vw,2rem);margin-bottom:12px}
+  .divline{width:40px;margin:12px 0 28px}
+  .ssub{font-size:.88rem}
+  
+  /* Carousel on mobile */
+  .carousel-section{padding:0}
+  .c-slide{height:380px}
+  .c-num{font-size:3rem}
+  .c-tag{font-size:.65rem}
+  .c-ttl{font-size:1.4rem;margin-bottom:8px}
+  .c-body{font-size:.8rem;line-height:1.6}
+  .c-content{padding:28px 20px}
+  
+  /* Services: 1 column on mobile */
+  .svc-grid{grid-template-columns:1fr;gap:14px;margin-top:28px}
+  .svc-card{padding:20px 18px;overflow:visible}
+  .svc-card h3{font-size:1.05rem;margin-bottom:8px}
+  .svc-card p{font-size:.82rem;line-height:1.6}
+  .svc-ico{width:44px;height:44px;font-size:1.2rem}
+  .svc-arr{margin-top:16px;font-size:.78rem}
+  
+  /* About on mobile */
+  .about-grid{grid-template-columns:1fr;gap:30px}
+  .about-img{aspect-ratio:16/9;border-radius:8px}
+  .about-badge{padding:16px;font-size:.9rem;bottom:-14px;right:-14px}
+  .about-badge .n{font-size:1.8rem}
+  .feat-list{gap:10px;margin-top:20px}
+  .feat-list li{font-size:.85rem;gap:10px}
+  .fdot{width:16px;height:16px}
+  
+  /* Stats banner on mobile */
+  .stats-banner{padding:50px 4%}
+  .stats-banner-inner{grid-template-columns:repeat(2,1fr);gap:16px}
+  .sb-item{padding:18px 12px}
+  .sb-item .n{font-size:2rem}
+  .sb-item .l{font-size:.7rem}
+  
+  /* Testimonials on mobile */
+  .testi-grid{grid-template-columns:1fr;gap:14px;margin-top:28px}
+  .testi-card{padding:20px;border-radius:8px}
+  .stars{font-size:.75rem;margin-bottom:10px;letter-spacing:1px}
+  .tq{font-size:.85rem;line-height:1.6;margin-bottom:18px;padding-top:10px}
+  .tq::before{font-size:2.8rem;top:-8px}
+  .tauth{gap:10px}
+  .tav{width:36px;height:36px;font-size:.7rem}
+  .tname{font-size:.85rem}
+  .trole{font-size:.7rem}
+  
+  /* CTA on mobile */
+  .cta-section{padding:70px 4%}
+  .cta-inner{max-width:100%}
+  .cta-inner .sh{font-size:clamp(1.4rem,2.8vw,2rem);margin-bottom:10px}
+  .cta-inner .ssub{font-size:.85rem;margin:0 auto 24px}
+  .cta-btns{flex-direction:column;gap:10px}
+  
+  /* Footer on mobile */
+  footer{padding:40px 4% 20px}
+  .fi{grid-template-columns:1fr;gap:30px;margin-bottom:30px}
+  .fcol h4{font-size:.75rem;margin-bottom:12px}
+  .fcol ul li a{font-size:.8rem}
+  .fb p{font-size:.8rem;line-height:1.6}
+  .fbot{flex-direction:column;gap:10px;text-align:center;font-size:.7rem;padding-top:16px}
+}
+
+/* EXTRA SMALL: 360px and below */
+@media(max-width:360px){
+  .navbar{height:55px}
+  .hero-h1{font-size:clamp(1.6rem,3vw,2.4rem)}
+  .sh{font-size:clamp(1.3rem,2.5vw,1.8rem)}
+  .btn-pri,.btn-out{padding:11px 18px;font-size:11px}
+  .svc-card{padding:16px 14px}
+  .cta-inner .sh{font-size:clamp(1.2rem,2.5vw,1.8rem)}
+  .c-slide{height:340px}
+  .c-ttl{font-size:1.2rem}
+}
+
 </style>
 </head>
 <body>
 
-<!-- THEME CHECKBOX (must come before .page for CSS sibling selector) -->
+<!-- THEME CHECKBOX -->
 <input type="checkbox" id="themetoggle"/>
 
 <div class="page">
@@ -597,7 +748,7 @@ footer{
   </div>
 </nav>
 
-<!-- ═══ HERO ═══════════════════════════════════════════════ -->
+<!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
@@ -652,11 +803,9 @@ footer{
   </div>
 </div>
 
-<!-- ═══ CAROUSEL / SOLUTIONS ═══════════════════════════════ -->
+<!-- CAROUSEL / SOLUTIONS -->
 <div class="carousel-section" id="solutions">
   <div class="c-track">
-
-    <!-- Slide 1: AV — conference room -->
     <div class="c-slide">
       <div class="c-slide-bg s1-bg"></div>
       <div class="c-slide-overlay"></div>
@@ -668,7 +817,6 @@ footer{
       </div>
     </div>
 
-    <!-- Slide 2: Tech city / ELV -->
     <div class="c-slide">
       <div class="c-slide-bg s2-bg"></div>
       <div class="c-slide-overlay"></div>
@@ -680,7 +828,6 @@ footer{
       </div>
     </div>
 
-    <!-- Slide 3: Server / ICT -->
     <div class="c-slide">
       <div class="c-slide-bg s3-bg"></div>
       <div class="c-slide-overlay"></div>
@@ -692,7 +839,6 @@ footer{
       </div>
     </div>
 
-    <!-- Slide 4: Robot / Security -->
     <div class="c-slide">
       <div class="c-slide-bg s4-bg"></div>
       <div class="c-slide-overlay"></div>
@@ -704,7 +850,6 @@ footer{
       </div>
     </div>
 
-    <!-- Slide 5: Modern office / Smart Building -->
     <div class="c-slide">
       <div class="c-slide-bg s5-bg"></div>
       <div class="c-slide-overlay"></div>
@@ -715,7 +860,6 @@ footer{
         <p class="c-body">IoT-enabled platforms for lighting control, energy management, HVAC automation, and occupancy analytics — creating responsive, sustainable spaces for tomorrow.</p>
       </div>
     </div>
-
   </div>
   <div class="c-dots">
     <div class="c-dot"></div>
@@ -726,7 +870,7 @@ footer{
   </div>
 </div>
 
-<!-- ═══ SERVICES GRID ═══════════════════════════════════════ -->
+<!-- SERVICES GRID -->
 <section id="services" style="background:var(--bg);transition:background .45s">
   <div class="si">
     <span class="eyebrow">What We Do</span>
@@ -775,7 +919,7 @@ footer{
   </div>
 </section>
 
-<!-- ═══ STATS BANNER ════════════════════════════════════════ -->
+<!-- STATS BANNER -->
 <div class="stats-banner">
   <div class="stats-banner-bg"></div>
   <div class="stats-banner-overlay"></div>
@@ -787,7 +931,7 @@ footer{
   </div>
 </div>
 
-<!-- ═══ ABOUT ════════════════════════════════════════════════ -->
+<!-- ABOUT -->
 <section class="about-section" id="about">
   <div class="si">
     <div class="about-grid">
@@ -822,7 +966,7 @@ footer{
   </div>
 </section>
 
-<!-- ═══ TESTIMONIALS ════════════════════════════════════════ -->
+<!-- TESTIMONIALS -->
 <section class="testi-section">
   <div class="si">
     <span class="eyebrow">Client Voices</span>
@@ -857,7 +1001,7 @@ footer{
   </div>
 </section>
 
-<!-- ═══ CTA ══════════════════════════════════════════════════ -->
+<!-- CTA -->
 <section class="cta-section" id="contact">
   <div class="cta-bg"></div>
   <div class="cta-overlay"></div>
@@ -874,7 +1018,7 @@ footer{
   </div>
 </section>
 
-<!-- ═══ FOOTER ═══════════════════════════════════════════════ -->
+<!-- FOOTER -->
 <footer>
   <div class="fi">
     <div class="fb">
@@ -916,6 +1060,6 @@ footer{
   </div>
 </footer>
 
-</div><!-- end .page -->
+</div>
 </body>
 </html>
